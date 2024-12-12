@@ -7,6 +7,7 @@ const Logout = () => {
   useEffect(() => {
     const handleLogout = () => {
       localStorage.removeItem('jwt'); 
+      console.log("loggin out")
       navigate("/")
       window.location.reload(); 
       
