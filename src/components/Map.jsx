@@ -60,6 +60,8 @@ const LeafletMap = () => {
       try {
         const response = await axios.get('https://map-backend-eight.vercel.app/api/locations');
         setLocations(response.data);
+        console.log(response.data);
+        
       } catch (error) {
         console.error('Error fetching locations:', error);
       }
