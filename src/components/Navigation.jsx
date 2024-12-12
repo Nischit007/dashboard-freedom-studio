@@ -36,12 +36,7 @@ const navLinks = [
         icon: Clock3,
     },
 
-    {
-        id: 4,
-        path: '/Calendar',
-        name: "Calendar",
-        icon: Calendar, 
-    },
+  
     {
         id: 5,
         path: '/logout',
@@ -55,7 +50,7 @@ const Navigation = () => {
 
     return (
         <>
-            <div className='px-10 py-12 flex flex-col border border-r-1 w-1/6 min-h-screen relative'>
+            <div className='px-10 py-12 flex flex-col border border-r-1  lg:w-[16%] min-h-screen relative'>
                 <div className='logo-div flex space-x-3 items-center'>
                     <img src={logo} alt="Logo" />
                 </div>

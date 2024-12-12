@@ -10,6 +10,8 @@ import Logout from './components/Logout';
 import Calendar from './components/Calendar';
 import Table from './components/Table';
 import Auth from './components/Auth/Auth';
+import ForgotPassword from './components/Auth/ForgotPassword';
+import ResetPassword from './components/Auth/ResetPassword';
 
 function App() {
   const [jwt, setJwt] = useState(() => localStorage.getItem('jwt'));
@@ -60,14 +62,14 @@ function App() {
         <Router>
           <div className="App flex">
             <Navigation />
-            <div className="w-4/5">
+            <div className="w-[85%]">
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/map" element={<Map />} />
                 <Route path="/charts" element={<Charts />} />
                 <Route path="/table" element={<Table />} />
-                <Route path="/calendar" element={<Calendar />} />
+               
                 <Route path="/logout" element={<Logout />} />
               </Routes>
             </div>
@@ -78,6 +80,8 @@ function App() {
           <Routes>
             {/* Unauthenticated Routes */}
             <Route path="/login" element={<Auth />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         </Router>

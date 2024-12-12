@@ -37,6 +37,8 @@ const Table = () => {
         .then(response => {
             console.log(`Delete successful: ${response.data.message}`);
             setData(data.filter(item => item._id !== id)); // Update state after deletion
+            window.location.reload();
+
         })
         .catch(error => {
             console.error('Error deleting item:', error);
@@ -46,6 +48,8 @@ const Table = () => {
 
 
   const getImageUrl = (fileName) => {
+    console.log("-----",fileName);
+    
     return fileName ? `http://localhost:8000/uploads/${fileName.replace('\\', '/')}` : 'https://via.placeholder.com/150';
   };
 
@@ -67,7 +71,7 @@ const Table = () => {
               <td className="py-1 px-2">{item.momentIssue}</td>
               <td className="py-1 px-2">
                 <img 
-                  src={getImageUrl(item.file)} 
+                  src={getImageUrl(item.heroSectionImage)} 
                   alt={item.actors || 'No actor'} 
                   className="w-20 h-20 object-cover rounded-lg" 
                   onError={(e) => {
@@ -77,11 +81,11 @@ const Table = () => {
                 />
               </td>
               <td className="py-3 px-3 flex space-x-2">
-                <button onClick={() => handleEdit(item._id)} className="text-blue-500 hover:text-blue-700">
+                {/* <button onClick={() => handleEdit(item._id)} className="text-blue-500 hover:text-blue-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-4.036a2.5 2.5 0 113.536 3.536L7 21H3v-4L16.732 3.232z" />
                   </svg>
-                </button>
+                </button> */}
                 <button onClick={() => handleDelete(item._id)} className="text-red-500 hover:text-red-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

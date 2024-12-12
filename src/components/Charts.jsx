@@ -16,7 +16,7 @@ const Charts = () => {
        </div>
   
        </div>
-       <div className='-mt-60 w-[1000px] flex justify-center '>
+       <div className='-mt-60 w-[1000px] lg:flex lg:justify-center hidden '>
        <Calendar></Calendar>
        </div>
 
