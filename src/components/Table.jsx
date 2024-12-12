@@ -29,7 +29,7 @@ const Table = () => {
 
   const handleDelete = (id) => {
     console.log(`Attempting to delete item with id: ${id}`);
-    axios.delete(`map-backend-eight.vercel.app/locations/${id}`,{
+    axios.delete(`map-backend-eight.vercel.app/api/locations/${id}`,{
       headers: {        
         Authorization: `Bearer ${jwt}`,
       },
