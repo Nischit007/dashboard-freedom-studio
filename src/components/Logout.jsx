@@ -9,7 +9,7 @@ const Logout = () => {
       localStorage.removeItem('jwt'); 
       
       window.location.reload(); 
-      navigate("/login")
+      navigate("/")
     };
 
     handleLogout();
