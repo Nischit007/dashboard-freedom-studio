@@ -6,7 +6,7 @@ const Table = () => {
   const [jwt, setJwt] = useState(() => localStorage.getItem('jwt'));
   useEffect(() => {
     // Fetch data from the API
-    axios.get('map-backend-eight.vercel.app/api/locations',{
+    axios.get('https://map-backend-eight.vercel.app/api/locations',{
       headers: {        
         Authorization: `Bearer ${jwt}`,
       },
@@ -29,7 +29,7 @@ const Table = () => {
 
   const handleDelete = (id) => {
     console.log(`Attempting to delete item with id: ${id}`);
-    axios.delete(`map-backend-eight.vercel.app/api/locations/${id}`,{
+    axios.delete(`https://map-backend-eight.vercel.app/api/locations/${id}`,{
       headers: {        
         Authorization: `Bearer ${jwt}`,
       },
@@ -50,7 +50,7 @@ const Table = () => {
   const getImageUrl = (fileName) => {
     console.log("-----",fileName);
     
-    return fileName ? `map-backend-eight.vercel.app/uploads/${fileName.replace('\\', '/')}` : 'https://via.placeholder.com/150';
+    return fileName ? `https://map-backend-eight.vercel.app/uploads/${fileName.replace('\\', '/')}` : 'https://via.placeholder.com/150';
   };
 
   return (
