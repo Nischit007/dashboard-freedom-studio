@@ -56,7 +56,7 @@ const ChartsTwo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('map-backend-eight.vercel.app/api/locations');
+        const response = await axios.get('https://map-backend-eight.vercel.app/api/locations');
         const data = response.data;
 
         // Group data by province
