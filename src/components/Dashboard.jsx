@@ -85,7 +85,7 @@ const Dashboard = () => {
     });
   
     try {
-      const response = await fetch('http://localhost:8000/api/locations', {
+      const response = await fetch('map-backend-eight.vercel.app/api/locations', {
         method: 'POST',
         body: data,
         headers: {
