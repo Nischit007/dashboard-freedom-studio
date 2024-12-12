@@ -27,7 +27,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const response = await fetch('map-backend-eight.vercel.app/auth/reset-password', {
+      const response = await fetch('https://map-backend-eight.vercel.app/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
