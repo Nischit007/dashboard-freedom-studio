@@ -162,7 +162,7 @@ const Dashboard = () => {
               { name: 'longitude', type: 'text', label: 'Longitude', color: 'text-[#9A1D20]' },
               { name: 'latitude', type: 'text', label: 'Latitude', color: 'text-[#9A1D20]' },
               { name: 'momentIssue', type: 'text', label: 'Movements', color: 'text-[#9A1D20]' },
-              { name: 'description', type: 'textarea', label: 'Short description for Card', maxLength: 150, color: 'text-[#9A1D20]' },
+              { name: 'description', type: 'textarea', label: 'Short description for Card', maxLength: 400, color: 'text-[#9A1D20]' },
               { name: 'actors', type: 'text', label: 'Organizer / Actor', color: 'text-[#9A1D20]' },
               { name: 'district', type: 'text', label: 'District', color: 'text-[#9A1D20]' },
               { name: 'duration', type: 'text', label: 'Duration', color: 'text-[#9A1D20]' },
