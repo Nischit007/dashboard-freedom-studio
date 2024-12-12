@@ -21,7 +21,7 @@ function App() {
     const validateToken = async () => {
       if (jwt) {
         try {
-          const response = await fetch('map-backend-eight.vercel.app/auth/validate', {
+          const response = await fetch('https://map-backend-eight.vercel.app/auth/validate', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
