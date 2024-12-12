@@ -7,7 +7,7 @@ const UseBarCharts = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/locations')
+    fetch('map-backend-eight.vercel.app/api/locations')
       .then((response) => response.json())
       .then((data) => {
         // Extract and group by province
